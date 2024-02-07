@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        Вы выбрали следующий напиток: <br />
+        <p>Тип напитка: @Model.DrinkType</p>
+        <p>Молоко: @Model.Milk</p>
+        <p>Сахар: @Model.Sugar</p>
+        <p>Стоимость: @ViewBag.Cost</p>
+    </div>
+    @Html.ActionLink("На главную", "Index")
+
+</body>
+</html>

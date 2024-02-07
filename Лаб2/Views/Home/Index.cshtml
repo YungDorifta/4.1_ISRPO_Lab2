@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+@using Лаб2.Models
+@model Лаб2.Models.TestModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title </title>
+</head>
+<body>
+    <h4> @ViewBag.CafeName </h4>
+    <div>
+        <h3>Menu</h3>
+        @Html.ActionLink("Drinks", "DrinkForm")
+    </div>
+
+    @using (Html.BeginForm("TestPage", "Test", FormMethod.Get))
+    {
+        <p> Author: @Html.TextBoxFor(m => m.Author)</p>
+        <p> Books: @Html.TextBoxFor(x => x.Books)</p>
+        <p> Year: @Html.TextBoxFor(x => x.Year)</p>
+        <input type="submit" value="show" />
+    }
+
+</body>
+</html>
